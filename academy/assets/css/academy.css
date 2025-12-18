@@ -1,0 +1,341 @@
+/*Wolvebite Academy - Additional Styles*/
+
+/* Academy-specific hero */
+.academy-hero {
+    background: linear-gradient(135deg, var(--primary-dark) 0%, var(--primary-color) 100%);
+    padding: calc(var(--space-3xl) * 2) 0;
+    text-align: center;
+    position: relative;
+    overflow: hidden;
+}
+
+.academy-hero::before {
+    content: '🎓';
+    position: absolute;
+    font-size: 20rem;
+    opacity: 0.05;
+    right: -5%;
+    top: 50%;
+    transform: translateY(-50%);
+}
+
+.academy-hero h1 {
+    font-size: clamp(2.5rem, 5vw, 4rem);
+    margin-bottom: var(--space-md);
+}
+
+.academy-hero p {
+    font-size: var(--font-size-xl);
+    opacity: 0.9;
+    max-width: 600px;
+    margin: 0 auto var(--space-xl);
+}
+
+/* Program cards */
+.program-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    gap: var(--space-xl);
+}
+
+.program-card {
+    background: var(--card-bg);
+    border-radius: var(--radius-lg);
+    overflow: hidden;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    border: 1px solid var(--border-color);
+}
+
+.program-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.2);
+}
+
+.program-card-image {
+    height: 180px;
+    background: linear-gradient(135deg, var(--primary-color), var(--accent-color));
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 4rem;
+    position: relative;
+}
+
+.program-card-image .level-badge {
+    position: absolute;
+    top: var(--space-md);
+    right: var(--space-md);
+}
+
+.program-card-body {
+    padding: var(--space-lg);
+}
+
+.program-card-title {
+    font-size: var(--font-size-xl);
+    margin-bottom: var(--space-sm);
+}
+
+.program-card-meta {
+    display: flex;
+    flex-wrap: wrap;
+    gap: var(--space-md);
+    margin-bottom: var(--space-md);
+    font-size: var(--font-size-sm);
+    color: var(--text-light);
+}
+
+.program-card-meta span {
+    display: flex;
+    align-items: center;
+    gap: var(--space-xs);
+}
+
+.program-card-price {
+    font-size: var(--font-size-xl);
+    font-weight: 700;
+    color: var(--accent-color);
+    margin-bottom: var(--space-md);
+}
+
+.program-card-desc {
+    color: var(--text-light);
+    font-size: var(--font-size-sm);
+    margin-bottom: var(--space-lg);
+    display: -webkit-box;
+    -webkit-line-clamp: 3;
+    line-clamp: 3;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+}
+
+/* Coach cards */
+.coach-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+    gap: var(--space-xl);
+}
+
+.coach-card {
+    background: var(--card-bg);
+    border-radius: var(--radius-lg);
+    padding: var(--space-xl);
+    text-align: center;
+    border: 1px solid var(--border-color);
+    transition: transform 0.3s ease;
+}
+
+.coach-card:hover {
+    transform: translateY(-5px);
+}
+
+.coach-avatar {
+    width: 120px;
+    height: 120px;
+    border-radius: 50%;
+    background: linear-gradient(135deg, var(--primary-color), var(--accent-color));
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 3rem;
+    margin: 0 auto var(--space-lg);
+    border: 4px solid var(--accent-color);
+}
+
+.coach-avatar img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 50%;
+}
+
+.coach-name {
+    font-size: var(--font-size-xl);
+    margin-bottom: var(--space-xs);
+}
+
+.coach-specialization {
+    color: var(--accent-color);
+    font-weight: 500;
+    margin-bottom: var(--space-md);
+}
+
+.coach-bio {
+    color: var(--text-light);
+    font-size: var(--font-size-sm);
+    margin-bottom: var(--space-md);
+}
+
+.coach-experience {
+    display: flex;
+    justify-content: center;
+    gap: var(--space-lg);
+    padding-top: var(--space-md);
+    border-top: 1px solid var(--border-color);
+}
+
+.coach-experience span {
+    display: flex;
+    align-items: center;
+    gap: var(--space-xs);
+    font-size: var(--font-size-sm);
+    color: var(--text-light);
+}
+
+/* Schedule table */
+.schedule-table {
+    width: 100%;
+    border-collapse: collapse;
+    background: var(--card-bg);
+    border-radius: var(--radius-lg);
+    overflow: hidden;
+}
+
+.schedule-table th,
+.schedule-table td {
+    padding: var(--space-md) var(--space-lg);
+    text-align: left;
+    border-bottom: 1px solid var(--border-color);
+}
+
+.schedule-table th {
+    background: var(--primary-color);
+    font-weight: 600;
+    text-transform: uppercase;
+    font-size: var(--font-size-sm);
+    letter-spacing: 0.5px;
+}
+
+.schedule-table tbody tr:hover {
+    background: rgba(255, 126, 95, 0.05);
+}
+
+.schedule-day {
+    font-weight: 600;
+    color: var(--accent-color);
+}
+
+/* Module list */
+.module-list {
+    display: flex;
+    flex-direction: column;
+    gap: var(--space-md);
+}
+
+.module-item {
+    display: flex;
+    align-items: center;
+    gap: var(--space-lg);
+    padding: var(--space-lg);
+    background: var(--card-bg);
+    border-radius: var(--radius-md);
+    border: 1px solid var(--border-color);
+    transition: border-color 0.3s ease;
+}
+
+.module-item:hover {
+    border-color: var(--accent-color);
+}
+
+.module-icon {
+    width: 50px;
+    height: 50px;
+    background: linear-gradient(135deg, var(--primary-color), var(--accent-color));
+    border-radius: var(--radius-md);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.5rem;
+    flex-shrink: 0;
+}
+
+.module-info {
+    flex: 1;
+}
+
+.module-title {
+    font-weight: 600;
+    margin-bottom: var(--space-xs);
+}
+
+.module-desc {
+    font-size: var(--font-size-sm);
+    color: var(--text-light);
+}
+
+/* Enrollment form */
+.enrollment-form {
+    max-width: 600px;
+    margin: 0 auto;
+}
+
+.enrollment-summary {
+    background: var(--card-bg);
+    border-radius: var(--radius-lg);
+    padding: var(--space-xl);
+    margin-bottom: var(--space-xl);
+    border: 1px solid var(--border-color);
+}
+
+.enrollment-summary h3 {
+    margin-bottom: var(--space-lg);
+    padding-bottom: var(--space-md);
+    border-bottom: 1px solid var(--border-color);
+}
+
+.enrollment-detail {
+    display: flex;
+    justify-content: space-between;
+    padding: var(--space-sm) 0;
+}
+
+.enrollment-detail:last-child {
+    font-size: var(--font-size-xl);
+    font-weight: 700;
+    padding-top: var(--space-md);
+    margin-top: var(--space-md);
+    border-top: 2px solid var(--accent-color);
+}
+
+.enrollment-detail .value {
+    color: var(--accent-color);
+}
+
+/* Stats section */
+.academy-stats {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: var(--space-xl);
+    padding: var(--space-3xl) 0;
+    text-align: center;
+}
+
+.academy-stat {
+    padding: var(--space-xl);
+}
+
+.academy-stat-number {
+    font-size: 3rem;
+    font-weight: 800;
+    color: var(--accent-color);
+    line-height: 1;
+    margin-bottom: var(--space-sm);
+}
+
+.academy-stat-label {
+    font-size: var(--font-size-sm);
+    color: var(--text-light);
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+@media (max-width: 768px) {
+    .academy-stats {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .program-grid,
+    .coach-grid {
+        grid-template-columns: 1fr;
+    }
+}

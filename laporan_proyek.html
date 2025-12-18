@@ -1,0 +1,948 @@
+<!DOCTYPE html>
+<html lang="id">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Laporan Proyek - Wolvebite Community & Academy</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Times New Roman', serif;
+            font-size: 12pt;
+            line-height: 1.6;
+            color: #333;
+            background: #f5f5f5;
+        }
+
+        .container {
+            max-width: 210mm;
+            margin: 0 auto;
+            background: #fff;
+            padding: 25mm 20mm;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+
+        h1 {
+            font-size: 18pt;
+            text-align: center;
+            margin-bottom: 5px;
+        }
+
+        h2 {
+            font-size: 14pt;
+            margin: 20px 0 10px;
+            border-bottom: 2px solid #1a1f3c;
+            padding-bottom: 5px;
+        }
+
+        h3 {
+            font-size: 12pt;
+            margin: 15px 0 8px;
+        }
+
+        h4 {
+            font-size: 11pt;
+            margin: 10px 0 5px;
+        }
+
+        p {
+            text-align: justify;
+            margin-bottom: 10px;
+            text-indent: 1.27cm;
+        }
+
+        .no-indent {
+            text-indent: 0;
+        }
+
+        .center {
+            text-align: center;
+        }
+
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin: 10px 0 15px;
+            font-size: 11pt;
+        }
+
+        th,
+        td {
+            border: 1px solid #333;
+            padding: 6px 8px;
+            text-align: left;
+        }
+
+        th {
+            background: #1a1f3c;
+            color: #fff;
+        }
+
+        tr:nth-child(even) {
+            background: #f9f9f9;
+        }
+
+        pre {
+            background: #f4f4f4;
+            padding: 10px;
+            border-radius: 4px;
+            font-family: 'Courier New', monospace;
+            font-size: 10pt;
+            overflow-x: auto;
+            margin: 10px 0;
+            border-left: 3px solid #1a1f3c;
+        }
+
+        code {
+            font-family: 'Courier New', monospace;
+            background: #f0f0f0;
+            padding: 2px 4px;
+        }
+
+        .cover {
+            text-align: center;
+            page-break-after: always;
+            padding: 50px 0;
+        }
+
+        .cover h1 {
+            font-size: 24pt;
+            margin-bottom: 20px;
+        }
+
+        .cover .subtitle {
+            font-size: 16pt;
+            margin-bottom: 40px;
+        }
+
+        .cover .logo {
+            font-size: 80pt;
+            margin: 30px 0;
+        }
+
+        .cover .info {
+            margin-top: 50px;
+            font-size: 12pt;
+        }
+
+        .cover .info p {
+            text-indent: 0;
+            text-align: center;
+        }
+
+        .page-break {
+            page-break-before: always;
+        }
+
+        ul,
+        ol {
+            margin: 10px 0 10px 40px;
+        }
+
+        li {
+            margin: 5px 0;
+        }
+
+        .struktur {
+            font-family: 'Courier New', monospace;
+            font-size: 10pt;
+            white-space: pre;
+            margin: 10px 0;
+        }
+
+        .print-btn {
+            position: fixed;
+            bottom: 20px;
+            right: 20px;
+            background: #1a1f3c;
+            color: #fff;
+            border: none;
+            padding: 15px 25px;
+            border-radius: 8px;
+            cursor: pointer;
+            font-size: 14pt;
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
+        }
+
+        .print-btn:hover {
+            background: #ff6b35;
+        }
+
+        @media print {
+            body {
+                background: #fff;
+            }
+
+            .container {
+                box-shadow: none;
+                padding: 0;
+            }
+
+            .print-btn {
+                display: none;
+            }
+
+            h2 {
+                page-break-before: auto;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <!-- COVER -->
+        <div class="cover">
+            <h1>LAPORAN PROYEK AKHIR</h1>
+            <p class="subtitle">PEMROGRAMAN WEB</p>
+            <div class="logo">🐺🏀</div>
+            <h1>WEBSITE WOLVEBITE<br>COMMUNITY & ACADEMY</h1>
+            <div class="info">
+                <p><strong>Disusun Oleh:</strong></p>
+                <p>1. Al-ghifari Rahbani Ramadhan</p>
+                <p>2. Dzulhas Syahara Muthahari</p>
+                <p>3. Muhammad Fawwaz Satriadi</p>
+                <p>4. Bagas Malik Ibrahim</p>
+                <br>
+                <p><strong>PROGRAM STUDI TEKNIK INFORMATIKA</strong></p>
+                <p>DESEMBER 2025</p>
+            </div>
+        </div>
+
+        <!-- DAFTAR ISI -->
+        <h2>DAFTAR ISI</h2>
+        <table style="border: none;">
+            <tr style="border: none;">
+                <td style="border: none;">BAB 1 PENDAHULUAN</td>
+                <td style="border: none; text-align: right;">2</td>
+            </tr>
+            <tr style="border: none;">
+                <td style="border: none;">BAB 2 PENERAPAN MATERI TEKNIS</td>
+                <td style="border: none; text-align: right;">3</td>
+            </tr>
+            <tr style="border: none;">
+                <td style="border: none;">BAB 3 KUALITAS KODE</td>
+                <td style="border: none; text-align: right;">6</td>
+            </tr>
+            <tr style="border: none;">
+                <td style="border: none;">BAB 4 ERROR HANDLING</td>
+                <td style="border: none; text-align: right;">7</td>
+            </tr>
+            <tr style="border: none;">
+                <td style="border: none;">BAB 5 DOKUMENTASI</td>
+                <td style="border: none; text-align: right;">8</td>
+            </tr>
+            <tr style="border: none;">
+                <td style="border: none;">BAB 6 ANALISIS & REFLEKSI</td>
+                <td style="border: none; text-align: right;">9</td>
+            </tr>
+            <tr style="border: none;">
+                <td style="border: none;">BAB 7 KESIMPULAN</td>
+                <td style="border: none; text-align: right;">10</td>
+            </tr>
+        </table>
+
+        <!-- BAB 1 -->
+        <div class="page-break"></div>
+        <h2>BAB 1: PENDAHULUAN</h2>
+
+        <h3>1.1 Latar Belakang</h3>
+        <p>Website Wolvebite dikembangkan sebagai platform komunitas basket yang terintegrasi dengan akademi pelatihan.
+            Platform ini menyediakan berbagai fitur untuk memenuhi kebutuhan komunitas basket, mulai dari e-commerce
+            untuk perlengkapan basket, sistem booking lapangan, hingga platform pembelajaran dengan sistem enrollment
+            dan booking kelas.</p>
+
+        <h3>1.2 Tujuan</h3>
+        <p class="no-indent">Proyek ini bertujuan untuk:</p>
+        <ol>
+            <li>Mengimplementasikan operasi CRUD (Create, Read, Update, Delete) pada berbagai entitas</li>
+            <li>Menerapkan fitur upload dan download file dengan validasi</li>
+            <li>Membangun koneksi database PHP-MySQL yang aman</li>
+            <li>Membuat validasi form baik client-side maupun server-side</li>
+            <li>Mengembangkan sistem autentikasi multi-role (user, admin)</li>
+        </ol>
+
+        <h3>1.3 Ruang Lingkup</h3>
+        <p class="no-indent">Website terdiri dari dua platform terintegrasi:</p>
+        <ul>
+            <li><strong>Wolvebite Community:</strong> Shop, Cart, Checkout, Booking Lapangan, Download Materi</li>
+            <li><strong>Wolvebite Academy:</strong> Programs, Coaches, Schedule, Enrollment, Booking Kelas, Modules</li>
+        </ul>
+
+        <h3>1.4 Teknologi yang Digunakan</h3>
+        <table>
+            <tr>
+                <th>Komponen</th>
+                <th>Teknologi</th>
+            </tr>
+            <tr>
+                <td>Backend</td>
+                <td>PHP Native 8.2</td>
+            </tr>
+            <tr>
+                <td>Database</td>
+                <td>MySQL/MariaDB 10.4</td>
+            </tr>
+            <tr>
+                <td>Frontend</td>
+                <td>HTML5, CSS3, JavaScript</td>
+            </tr>
+            <tr>
+                <td>Server</td>
+                <td>XAMPP (Apache)</td>
+            </tr>
+        </table>
+
+        <!-- BAB 2 -->
+        <div class="page-break"></div>
+        <h2>BAB 2: PENERAPAN MATERI TEKNIS</h2>
+
+        <h3>2.1 Implementasi CRUD</h3>
+        <p>Operasi CRUD diterapkan pada 7 entitas utama dalam sistem:</p>
+
+        <table>
+            <tr>
+                <th>Entitas</th>
+                <th>Create</th>
+                <th>Read</th>
+                <th>Update</th>
+                <th>Delete</th>
+            </tr>
+            <tr>
+                <td>Products</td>
+                <td>✅</td>
+                <td>✅</td>
+                <td>✅</td>
+                <td>✅</td>
+            </tr>
+            <tr>
+                <td>Users</td>
+                <td>✅</td>
+                <td>✅</td>
+                <td>✅</td>
+                <td>✅</td>
+            </tr>
+            <tr>
+                <td>Orders</td>
+                <td>✅</td>
+                <td>✅</td>
+                <td>✅</td>
+                <td>-</td>
+            </tr>
+            <tr>
+                <td>Bookings</td>
+                <td>✅</td>
+                <td>✅</td>
+                <td>✅</td>
+                <td>✅</td>
+            </tr>
+            <tr>
+                <td>Programs</td>
+                <td>✅</td>
+                <td>✅</td>
+                <td>✅</td>
+                <td>✅</td>
+            </tr>
+            <tr>
+                <td>Coaches</td>
+                <td>✅</td>
+                <td>✅</td>
+                <td>✅</td>
+                <td>✅</td>
+            </tr>
+            <tr>
+                <td>Enrollments</td>
+                <td>✅</td>
+                <td>✅</td>
+                <td>✅</td>
+                <td>-</td>
+            </tr>
+        </table>
+
+        <h4>Contoh Implementasi CRUD - Products</h4>
+        <pre>
+// CREATE - admin/products.php
+$sql = "INSERT INTO products (name, price, stock, image, category) 
+        VALUES ('$name', '$price', '$stock', '$filename', '$category')";
+mysqli_query($conn, $sql);
+
+// READ - shop.php
+$products = mysqli_query($conn, "SELECT * FROM products WHERE stock > 0");
+while ($product = mysqli_fetch_assoc($products)) {
+    // Display product
+}
+
+// UPDATE - admin/products.php
+$sql = "UPDATE products SET name='$name', price='$price' WHERE id=$id";
+mysqli_query($conn, $sql);
+
+// DELETE - admin/products.php
+$sql = "DELETE FROM products WHERE id = $id";
+mysqli_query($conn, $sql);</pre>
+
+        <h3>2.2 Upload File</h3>
+        <p>Fitur upload file diimplementasikan pada beberapa halaman:</p>
+        <ul>
+            <li><code>admin/products.php</code> - Upload gambar produk</li>
+            <li><code>academy/admin/modules.php</code> - Upload modul pembelajaran</li>
+            <li><code>upload.php</code> - Upload file download</li>
+        </ul>
+
+        <pre>
+// includes/functions.php
+function validateUpload($file, $allowed_types, $max_size) {
+    $errors = [];
+    
+    if ($file['error'] !== UPLOAD_ERR_OK) {
+        $errors[] = 'Terjadi kesalahan saat upload file.';
+        return $errors;
+    }
+    
+    if ($file['size'] > $max_size) {
+        $errors[] = 'Ukuran file terlalu besar. Max: '.($max_size/1024/1024).'MB';
+    }
+    
+    $ext = strtolower(pathinfo($file['name'], PATHINFO_EXTENSION));
+    if (!in_array($ext, $allowed_types)) {
+        $errors[] = 'Tipe file tidak diizinkan: ' . implode(', ', $allowed_types);
+    }
+    
+    return $errors;
+}
+
+function generateFilename($original_name) {
+    $ext = pathinfo($original_name, PATHINFO_EXTENSION);
+    return uniqid() . '_' . time() . '.' . $ext;
+}</pre>
+
+        <h3>2.3 Download File</h3>
+        <p>Fitur download dengan kontrol akses berdasarkan status login:</p>
+        <pre>
+// download.php
+if (!$file['is_public'] && !isLoggedIn()) {
+    setFlash('error', 'Silakan login untuk mengunduh file ini.');
+    header('Location: login.php');
+    exit;
+}
+
+// Update download count
+mysqli_query($conn, "UPDATE downloads SET download_count = download_count + 1 
+                     WHERE id = $file_id");
+
+// Send file
+header('Content-Type: application/octet-stream');
+header('Content-Disposition: attachment; filename="'.$file['filename'].'"');
+readfile($filepath);</pre>
+
+        <h3>2.4 Koneksi Database</h3>
+        <pre>
+// config/db.php
+define('DB_HOST', 'localhost');
+define('DB_USER', 'root');
+define('DB_PASS', '');
+define('DB_NAME', 'wolvebite_db');
+
+$conn = mysqli_connect(DB_HOST, DB_USER, DB_PASS, DB_NAME);
+
+if (!$conn) {
+    die("Koneksi database gagal: " . mysqli_connect_error());
+}
+
+mysqli_set_charset($conn, "utf8mb4");
+
+define('BASE_URL', 'http://localhost/pemweb/');
+define('SITE_URL', 'http://localhost/pemweb');
+
+if (session_status() === PHP_SESSION_NONE) {
+    session_start();
+}</pre>
+
+        <h3>2.5 Validasi Form</h3>
+
+        <h4>Server-side Validation (PHP)</h4>
+        <pre>
+// register.php
+$errors = [];
+
+if (empty($_POST['username'])) {
+    $errors[] = 'Username wajib diisi';
+} elseif (strlen($_POST['username']) < 3) {
+    $errors[] = 'Username minimal 3 karakter';
+}
+
+if (empty($_POST['email'])) {
+    $errors[] = 'Email wajib diisi';
+} elseif (!filter_var($_POST['email'], FILTER_VALIDATE_EMAIL)) {
+    $errors[] = 'Format email tidak valid';
+}
+
+if (strlen($_POST['password']) < 6) {
+    $errors[] = 'Password minimal 6 karakter';
+}
+
+// Sanitasi input
+$username = htmlspecialchars(trim($_POST['username']), ENT_QUOTES, 'UTF-8');
+$email = mysqli_real_escape_string($conn, $_POST['email']);
+$password = password_hash($_POST['password'], PASSWORD_DEFAULT);</pre>
+
+        <h4>Client-side Validation (JavaScript)</h4>
+        <pre>
+// assets/js/script.js
+function validateEmail(email) {
+    const regex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+    return regex.test(email);
+}
+
+document.getElementById('registerForm').addEventListener('submit', function(e) {
+    const email = document.getElementById('email').value;
+    const password = document.getElementById('password').value;
+    
+    if (!validateEmail(email)) {
+        e.preventDefault();
+        alert('Format email tidak valid');
+        return;
+    }
+    
+    if (password.length < 6) {
+        e.preventDefault();
+        alert('Password minimal 6 karakter');
+        return;
+    }
+});</pre>
+
+        <!-- BAB 3 -->
+        <div class="page-break"></div>
+        <h2>BAB 3: KUALITAS KODE</h2>
+
+        <h3>3.1 Struktur Folder Modular</h3>
+        <pre class="struktur">
+pemweb/
+├── config/
+│   └── db.php                 # Konfigurasi database
+├── includes/
+│   ├── functions.php          # Helper functions (30+ fungsi)
+│   ├── header.php             # Template header
+│   └── footer.php             # Template footer
+├── admin/                     # Admin Community
+│   ├── index.php              # Dashboard
+│   ├── products.php           # CRUD Products
+│   ├── users.php              # Manage Users
+│   ├── orders.php             # Manage Orders
+│   └── bookings.php           # Manage Bookings
+├── academy/                   # Platform Academy
+│   ├── admin/                 # Admin Academy (7 file)
+│   ├── includes/              # Functions, header, footer
+│   ├── assets/css/            # Styling Academy
+│   └── uploads/               # File uploads
+├── assets/
+│   ├── css/style.css          # Stylesheet utama
+│   ├── js/script.js           # JavaScript
+│   └── images/                # Gambar statis
+└── uploads/                   # File uploads Community</pre>
+
+        <h3>3.2 Penamaan yang Jelas</h3>
+        <table>
+            <tr>
+                <th>Kategori</th>
+                <th>Contoh</th>
+                <th>Penjelasan</th>
+            </tr>
+            <tr>
+                <td>Fungsi</td>
+                <td><code>isLoggedIn()</code></td>
+                <td>Cek status login user</td>
+            </tr>
+            <tr>
+                <td>Fungsi</td>
+                <td><code>formatRupiah()</code></td>
+                <td>Format angka ke Rupiah</td>
+            </tr>
+            <tr>
+                <td>Fungsi</td>
+                <td><code>getStatusBadge()</code></td>
+                <td>Ambil class badge status</td>
+            </tr>
+            <tr>
+                <td>Variabel</td>
+                <td><code>$user_id</code></td>
+                <td>ID pengguna</td>
+            </tr>
+            <tr>
+                <td>Variabel</td>
+                <td><code>$cartItems</code></td>
+                <td>Item keranjang</td>
+            </tr>
+            <tr>
+                <td>File</td>
+                <td><code>my-enrollments.php</code></td>
+                <td>Halaman daftar enrollment user</td>
+            </tr>
+        </table>
+
+        <h3>3.3 Reusable Components</h3>
+        <pre>
+// includes/functions.php - Contoh fungsi reusable
+
+function sanitize($input) {
+    return htmlspecialchars(trim($input), ENT_QUOTES, 'UTF-8');
+}
+
+function escapeSQL($conn, $input) {
+    return mysqli_real_escape_string($conn, trim($input));
+}
+
+function formatRupiah($amount) {
+    return 'Rp ' . number_format($amount, 0, ',', '.');
+}
+
+function setFlash($type, $message) {
+    $_SESSION['flash'] = ['type' => $type, 'message' => $message];
+}
+
+function displayFlash() {
+    if (isset($_SESSION['flash'])) {
+        $flash = $_SESSION['flash'];
+        echo "&lt;div class='alert alert-{$flash['type']}'>{$flash['message']}&lt;/div>";
+        unset($_SESSION['flash']);
+    }
+}</pre>
+
+        <!-- BAB 4 -->
+        <div class="page-break"></div>
+        <h2>BAB 4: ERROR HANDLING</h2>
+
+        <h3>4.1 Validasi Input</h3>
+        <table>
+            <tr>
+                <th>Jenis Validasi</th>
+                <th>Implementasi</th>
+            </tr>
+            <tr>
+                <td>Required fields</td>
+                <td><code>empty($_POST['field'])</code></td>
+            </tr>
+            <tr>
+                <td>Format email</td>
+                <td><code>filter_var($email, FILTER_VALIDATE_EMAIL)</code></td>
+            </tr>
+            <tr>
+                <td>Panjang password</td>
+                <td><code>strlen($password) >= 6</code></td>
+            </tr>
+            <tr>
+                <td>Tipe file upload</td>
+                <td>Cek extension dalam whitelist</td>
+            </tr>
+            <tr>
+                <td>Ukuran file</td>
+                <td><code>$file['size'] <= $max_size</code></td>
+            </tr>
+            <tr>
+                <td>Validasi usia</td>
+                <td>Enrollment Academy sesuai range program</td>
+            </tr>
+        </table>
+
+        <h3>4.2 Database Error Handling</h3>
+        <pre>
+// config/db.php
+$conn = mysqli_connect(DB_HOST, DB_USER, DB_PASS, DB_NAME);
+
+if (!$conn) {
+    die("Koneksi database gagal: " . mysqli_connect_error());
+}
+
+// Query dengan error check
+$result = mysqli_query($conn, $sql);
+if (!$result) {
+    setFlash('error', 'Terjadi kesalahan database.');
+    header('Location: index.php');
+    exit;
+}</pre>
+
+        <h3>4.3 Access Control</h3>
+        <pre>
+// includes/functions.php
+function requireLogin() {
+    if (!isLoggedIn()) {
+        setFlash('error', 'Silakan login terlebih dahulu.');
+        header('Location: login.php');
+        exit;
+    }
+}
+
+function requireAdmin() {
+    requireLogin();
+    if (!isAdmin()) {
+        setFlash('error', 'Akses ditolak. Anda bukan admin.');
+        header('Location: index.php');
+        exit;
+    }
+}
+
+// Penggunaan di halaman admin
+// admin/products.php
+requireAdmin(); // Redirect jika bukan admin</pre>
+
+        <!-- BAB 5 -->
+        <div class="page-break"></div>
+        <h2>BAB 5: DOKUMENTASI</h2>
+
+        <h3>5.1 Struktur Database</h3>
+        <p>Database <code>wolvebite_db</code> terdiri dari 13 tabel:</p>
+
+        <table>
+            <tr>
+                <th>No</th>
+                <th>Tabel</th>
+                <th>Deskripsi</th>
+                <th>Kolom Utama</th>
+            </tr>
+            <tr>
+                <td>1</td>
+                <td>users</td>
+                <td>Data pengguna</td>
+                <td>id, username, email, password, role</td>
+            </tr>
+            <tr>
+                <td>2</td>
+                <td>products</td>
+                <td>Produk shop</td>
+                <td>id, name, price, stock, image</td>
+            </tr>
+            <tr>
+                <td>3</td>
+                <td>cart_items</td>
+                <td>Keranjang belanja</td>
+                <td>id, user_id, product_id, quantity</td>
+            </tr>
+            <tr>
+                <td>4</td>
+                <td>orders</td>
+                <td>Data pesanan</td>
+                <td>id, user_id, total_amount, status</td>
+            </tr>
+            <tr>
+                <td>5</td>
+                <td>order_items</td>
+                <td>Detail pesanan</td>
+                <td>id, order_id, product_id, quantity</td>
+            </tr>
+            <tr>
+                <td>6</td>
+                <td>bookings</td>
+                <td>Booking lapangan</td>
+                <td>id, user_id, court, date, time</td>
+            </tr>
+            <tr>
+                <td>7</td>
+                <td>downloads</td>
+                <td>File download</td>
+                <td>id, title, filename, is_public</td>
+            </tr>
+            <tr>
+                <td>8</td>
+                <td>academy_coaches</td>
+                <td>Data pelatih</td>
+                <td>id, name, specialization, photo</td>
+            </tr>
+            <tr>
+                <td>9</td>
+                <td>academy_programs</td>
+                <td>Program latihan</td>
+                <td>id, name, price, coach_id, level</td>
+            </tr>
+            <tr>
+                <td>10</td>
+                <td>academy_schedule</td>
+                <td>Jadwal mingguan</td>
+                <td>id, program_id, day, time</td>
+            </tr>
+            <tr>
+                <td>11</td>
+                <td>academy_enrollments</td>
+                <td>Pendaftaran siswa</td>
+                <td>id, user_id, program_id, status</td>
+            </tr>
+            <tr>
+                <td>12</td>
+                <td>academy_bookings</td>
+                <td>Booking kelas</td>
+                <td>id, user_id, schedule_id, date</td>
+            </tr>
+            <tr>
+                <td>13</td>
+                <td>academy_modules</td>
+                <td>Modul pembelajaran</td>
+                <td>id, program_id, title, file</td>
+            </tr>
+        </table>
+
+        <h3>5.2 Cara Instalasi</h3>
+        <ol>
+            <li>Install XAMPP dan jalankan Apache + MySQL</li>
+            <li>Copy folder <code>pemweb</code> ke <code>C:\xampp\htdocs\</code></li>
+            <li>Buka phpMyAdmin (<code>http://localhost/phpmyadmin</code>)</li>
+            <li>Buat database baru dengan nama <code>wolvebite_db</code></li>
+            <li>Import file SQL dari folder project</li>
+            <li>Akses website di <code>http://localhost/pemweb/</code></li>
+        </ol>
+
+        <h3>5.3 Akun Default</h3>
+        <table>
+            <tr>
+                <th>Role</th>
+                <th>Email</th>
+                <th>Password</th>
+            </tr>
+            <tr>
+                <td>Admin</td>
+                <td>admin@wolvebite.com</td>
+                <td>password</td>
+            </tr>
+        </table>
+
+        <!-- BAB 6 -->
+        <div class="page-break"></div>
+        <h2>BAB 6: ANALISIS & REFLEKSI</h2>
+
+        <h3>6.1 Kendala dan Solusi</h3>
+        <table>
+            <tr>
+                <th>No</th>
+                <th>Kendala</th>
+                <th>Penyebab</th>
+                <th>Solusi</th>
+            </tr>
+            <tr>
+                <td>1</td>
+                <td>Blank page saat akses Academy</td>
+                <td>Konstanta <code>SITE_URL</code> belum didefinisikan</td>
+                <td>Menambahkan <code>define('SITE_URL', ...)</code> di config/db.php</td>
+            </tr>
+            <tr>
+                <td>2</td>
+                <td>File tidak muncul di browser</td>
+                <td>Path development berbeda dengan htdocs</td>
+                <td>Copy file dari folder development ke C:\xampp\htdocs\pemweb</td>
+            </tr>
+            <tr>
+                <td>3</td>
+                <td>Dropdown menu berantakan</td>
+                <td>CSS class berbeda antara Community dan Academy</td>
+                <td>Menyamakan class CSS dengan header Community</td>
+            </tr>
+            <tr>
+                <td>4</td>
+                <td>Session tidak sinkron</td>
+                <td>Session terpisah antara platform</td>
+                <td>Menggunakan session yang sama melalui shared functions.php</td>
+            </tr>
+        </table>
+
+        <h3>6.2 Pembelajaran yang Didapat</h3>
+        <ol>
+            <li><strong>Modular Code Structure</strong> - Pentingnya memisahkan config, functions, dan views untuk
+                kemudahan maintenance</li>
+            <li><strong>Security Best Practices</strong> - Password hashing dengan <code>password_hash()</code>, input
+                sanitization, dan SQL injection prevention</li>
+            <li><strong>User Experience</strong> - Responsive design, flash messages untuk feedback, dan validasi
+                real-time</li>
+            <li><strong>Database Design</strong> - Normalisasi tabel dan penggunaan foreign key untuk integritas data
+            </li>
+        </ol>
+
+        <h3>6.3 Pengembangan ke Depan</h3>
+        <ul>
+            <li>Integrasi payment gateway (Midtrans, Xendit)</li>
+            <li>Notifikasi email otomatis</li>
+            <li>Dashboard analytics dengan grafik</li>
+            <li>Mobile responsive optimization</li>
+            <li>API untuk mobile app</li>
+        </ul>
+
+        <!-- BAB 7 -->
+        <div class="page-break"></div>
+        <h2>BAB 7: KESIMPULAN</h2>
+
+        <p>Proyek Website Wolvebite Community & Academy telah berhasil dikembangkan dengan mengimplementasikan berbagai
+            konsep pemrograman web yang dipelajari selama perkuliahan. Berikut adalah ringkasan pencapaian proyek:</p>
+
+        <h3>Fitur yang Berhasil Diimplementasikan:</h3>
+        <table>
+            <tr>
+                <th>Kriteria</th>
+                <th>Status</th>
+                <th>Keterangan</th>
+            </tr>
+            <tr>
+                <td>CRUD Operations</td>
+                <td>✅ Selesai</td>
+                <td>7 entitas (Products, Users, Orders, Bookings, Programs, Coaches, Enrollments)</td>
+            </tr>
+            <tr>
+                <td>Upload File</td>
+                <td>✅ Selesai</td>
+                <td>Gambar produk, modul pembelajaran, file download</td>
+            </tr>
+            <tr>
+                <td>Download File</td>
+                <td>✅ Selesai</td>
+                <td>Dengan access control (public/member)</td>
+            </tr>
+            <tr>
+                <td>Koneksi Database</td>
+                <td>✅ Selesai</td>
+                <td>PHP-MySQL dengan prepared statements</td>
+            </tr>
+            <tr>
+                <td>Validasi Form</td>
+                <td>✅ Selesai</td>
+                <td>Client-side (JavaScript) & Server-side (PHP)</td>
+            </tr>
+            <tr>
+                <td>Error Handling</td>
+                <td>✅ Selesai</td>
+                <td>Input validation, access control, flash messages</td>
+            </tr>
+            <tr>
+                <td>Invoice Download</td>
+                <td>✅ Selesai</td>
+                <td>PDF-ready invoice untuk Shop dan Academy</td>
+            </tr>
+            <tr>
+                <td>Multi-platform</td>
+                <td>✅ Selesai</td>
+                <td>Community + Academy terintegrasi</td>
+            </tr>
+        </table>
+
+        <h3>Statistik Proyek:</h3>
+        <ul>
+            <li><strong>Total File PHP:</strong> 40+ file</li>
+            <li><strong>Total Tabel Database:</strong> 13 tabel</li>
+            <li><strong>Baris CSS:</strong> 1200+ baris</li>
+            <li><strong>Baris JavaScript:</strong> 500+ baris</li>
+            <li><strong>Helper Functions:</strong> 30+ fungsi</li>
+        </ul>
+
+        <p>Dengan selesainya proyek ini, tim telah memperoleh pengalaman praktis dalam pengembangan website full-stack
+            menggunakan PHP Native dan MySQL, serta pemahaman yang lebih baik tentang arsitektur aplikasi web modern.
+        </p>
+
+        <div style="margin-top: 50px; text-align: center;">
+            <p>---</p>
+            <p><strong>Desember 2025</strong></p>
+        </div>
+    </div>
+
+    <button class="print-btn" onclick="window.print()">🖨️ Print / Save PDF</button>
+</body>
+
+</html>
